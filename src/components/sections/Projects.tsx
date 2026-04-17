@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, CheckCircle2 } from "lucide-react";
+import { ExternalLink, CheckCircle2, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -36,10 +36,13 @@ export default function Projects() {
                 onClick={() => setSelected(project)}
               >
                 <CardHeader className="pb-3">
-                  <h3 className="font-bold font-space-grotesk text-lg">
-                    {project.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <div className="flex items-start justify-between">
+                    <h3 className="font-bold font-space-grotesk text-lg">
+                      {project.name}
+                    </h3>
+                    <ArrowUpRight className="h-5 w-5 text-muted-foreground flex-shrink-0 -mt-1 -mr-1" />
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-1">
                     {project.description}
                   </p>
                 </CardHeader>

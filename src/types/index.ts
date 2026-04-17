@@ -10,6 +10,7 @@ export type Project = {
   techStack: string[];
   githubUrl?: string;
   demoUrl?: string;
+  presentationUrl?: string;
   period?: string;
   role?: string;
   highlights?: string[];
@@ -28,6 +29,7 @@ export type CareerProject = {
 export type ExperienceItem = {
   id: string;
   org: string;
+  homepageUrl?: string;
   period: string;
   description: string[];
 };

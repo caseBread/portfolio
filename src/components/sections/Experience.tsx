@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Link } from "lucide-react";
 import { EXPERIENCES } from "@/data/projects";
 
 export default function Experience() {
@@ -28,8 +29,18 @@ export default function Experience() {
 
                 <div className="pb-2">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
-                    <h3 className="font-semibold font-space-grotesk text-foreground">
+                    <h3 className="font-semibold font-space-grotesk text-foreground flex items-center gap-1.5">
                       {item.org}
+                      {item.homepageUrl && (
+                        <a
+                          href={item.homepageUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <Link className="w-3.5 h-3.5" />
+                        </a>
+                      )}
                     </h3>
                     <span className="text-primary text-xs font-medium bg-primary/10 px-2 py-0.5 rounded-full self-start">
                       {item.period}

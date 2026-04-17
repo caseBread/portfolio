@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
       "React-query",
     ],
     githubUrl: "https://github.com/dnd-side-project/dnd-13th-3-frontend",
-    demoUrl: "https://dnd.ac/projects/93",
+    presentationUrl: "https://dnd.ac/projects/93",
     period: "2025.07 – 2025.08",
     role: "프론트엔드",
     highlights: [
@@ -212,6 +212,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "kusithms",
     org: "KUSITMS(한국대학생IT경영학회) 32-33기",
+    homepageUrl: "https://www.kusitms.com",
     period: "2025.08 – 2026.06",
     description: [
       "LG전자, 리트머스 등 기업 산학협력 프로젝트 운영 총괄",
@@ -223,6 +224,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "ausg",
     org: "AUSG(AWSKRUG University Student Group) 9기",
+    homepageUrl: "https://ausg.me/",
     period: "2025.07 – 현재",
     description: [
       "2025 AUSGCON 홈페이지 제작",
@@ -232,6 +234,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "dnd",
     org: "DND 13기",
+    homepageUrl: "https://dnd.ac/",
     period: "2025.06 – 2025.08",
     description: ["룸메이트 소통 앱 'Wini' 프로젝트 진행 : 운영진 특별상 수상"],
   },
@@ -244,6 +247,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "feconf",
     org: "2023 FEConf 스태프 참여",
+    homepageUrl: "https://2023.feconf.kr/",
     period: "2023.10",
     description: ["컨퍼런스 참여자 등록 보조"],
   },

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { ExternalLink, CheckCircle2, ArrowUpRight, Presentation } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -85,6 +85,14 @@ export default function Projects() {
                         </a>
                       </Button>
                     )}
+                    {project.presentationUrl && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={project.presentationUrl} target="_blank" rel="noopener noreferrer">
+                          <Presentation className="mr-1.5 h-3.5 w-3.5" />
+                          발표자료
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -158,6 +166,14 @@ export default function Projects() {
                     <a href={selected.demoUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                       Demo
+                    </a>
+                  </Button>
+                )}
+                {selected.presentationUrl && (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={selected.presentationUrl} target="_blank" rel="noopener noreferrer">
+                      <Presentation className="mr-1.5 h-3.5 w-3.5" />
+                      발표자료
                     </a>
                   </Button>
                 )}

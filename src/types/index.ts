@@ -29,7 +29,7 @@ export type ExperienceItem = {
   id: string;
   org: string;
   period: string;
-  description: string;
+  description: string[];
 };
 
 export type AwardItem = {

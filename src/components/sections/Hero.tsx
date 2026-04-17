@@ -99,7 +99,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          <p className="text-primary text-sm font-inter tracking-[0.15em] uppercase mb-6">
+          <p className="text-primary text-base font-inter tracking-[0.15em] uppercase mb-6">
             Frontend Developer
           </p>
 
@@ -107,16 +107,15 @@ export default function Hero() {
             김건우
           </h1>
 
-          <div className="h-12 flex items-center justify-center mb-5">
-            <span className="text-primary text-[clamp(20px,3vw,32px)] font-space-grotesk">
+          <div className="h-14 flex items-center justify-center mb-5">
+            <span className="text-primary text-[clamp(24px,4vw,42px)] font-space-grotesk">
               {displayedText}
               <span className="inline-block w-[2px] h-7 bg-primary ml-[2px] animate-pulse align-middle" />
             </span>
           </div>
 
-          <p className="text-muted-foreground text-[17px] leading-relaxed mb-8 max-w-lg">
-            서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를
-            만듭니다.
+          <p className="text-foreground/70 text-[19px] leading-relaxed mb-8 max-w-xl">
+            서비스의 목표를 이해하고 달성하는 개발자 김건우입니다.
           </p>
 
           <Button asChild size="lg" className="mb-6">

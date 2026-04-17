@@ -35,9 +35,14 @@ export default function Experience() {
                       {item.period}
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.description}
-                  </p>
+                  <ul className="text-muted-foreground text-sm leading-relaxed space-y-1">
+                    {item.description.map((line, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <span className="flex-shrink-0 w-1 h-1 rounded-full bg-primary" />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

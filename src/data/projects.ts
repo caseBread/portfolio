@@ -211,49 +211,51 @@ export const CAREER_PROJECTS: CareerProject[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "kusithms",
-    org: "KUSITHMS(한국대학생IT경영학회) 32기",
-    period: "2025.08 – 2025.12",
-    description: "LG전자 라이프집 개선 프로젝트 진행 → 2등상 수상",
+    org: "KUSITMS(한국대학생IT경영학회) 32-33기",
+    period: "2025.08 – 2026.06",
+    description: [
+      "LG전자, 리트머스 등 기업 산학협력 프로젝트 운영 총괄",
+      "UT, 데모데이 등 세션 커리큘럼 운영 총괄",
+      "리트머스 홈페이지 개선 프로젝트 진행 : 최우수상 수상",
+      "LG전자 라이프집 개선 프로젝트 진행 : 2등상 수상",
+    ],
   },
   {
     id: "ausg",
-    org: "AUSG 9기",
+    org: "AUSG(AWSKRUG University Student Group) 9기",
     period: "2025.07 – 현재",
-    description: "AWS 사용자 그룹",
+    description: [
+      "2025 AUSGCON 홈페이지 제작",
+      "BigChat 발표 - 프론트엔드가 아닌 개발자 대상으로 프론트엔드 서버 구조에 대해 발표",
+    ],
   },
   {
     id: "dnd",
     org: "DND 13기",
     period: "2025.06 – 2025.08",
-    description: "Wini 프로젝트 진행",
+    description: ["룸메이트 소통 앱 'Wini' 프로젝트 진행 : 운영진 특별상 수상"],
   },
   {
     id: "dnd-hackathon",
-    org: "2025 DND Hackathon",
+    org: "2025 DND Hackathon 참여",
     period: "2025",
-    description: "골목이음 프로젝트 진행",
+    description: ["골목이음 프로젝트 진행"],
   },
   {
     id: "feconf",
-    org: "2023 FEConf 스태프",
-    period: "2023",
-    description: "컨퍼런스 참여자 등록 보조",
+    org: "2023 FEConf 스태프 참여",
+    period: "2023.10",
+    description: ["컨퍼런스 참여자 등록 보조"],
   },
   {
     id: "sprint",
     org: "테오의 스프린트 11기",
     period: "2023.02",
-    description: "simple-thumbnail 프로젝트 진행",
+    description: ["simple-thumbnail 프로젝트 진행"],
   },
 ];
 
 export const AWARDS: AwardItem[] = [
-  {
-    id: "kusithms-award",
-    title: "LG전자 라이프집 개선 프로젝트 2등상",
-    org: "KUSITHMS",
-    year: "2025",
-  },
   {
     id: "spring-contest",
     title: "봄 프로그래밍 경시대회 입상",

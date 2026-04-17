@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -22,11 +23,22 @@ export default function Career() {
           <Card className="mb-8">
             <CardHeader>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="text-xl font-bold">넛지헬스케어(주)</h3>
-                  <p className="text-primary text-sm font-medium mt-0.5">
-                    프론트엔드팀 파트장
-                  </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-muted flex items-center justify-center">
+                    <Image
+                      src="/images/career/cashwalk.png"
+                      alt="넛지헬스케어 로고"
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">넛지헬스케어(주)</h3>
+                    <p className="text-primary text-sm font-medium mt-0.5">
+                      프론트엔드팀 파트장
+                    </p>
+                  </div>
                 </div>
                 <Badge variant="secondary" className="self-start sm:self-auto">
                   2023.03 – 2025.06
@@ -34,8 +46,8 @@ export default function Career() {
               </div>
               <p className="text-muted-foreground text-sm mt-2">
                 대한민국 국민 3명 중 1명이 사용하는 국민 건강앱{" "}
-                <span className="text-foreground font-medium">[캐시워크]</span>를
-                개발한 디지털 헬스케어 스타트업
+                <span className="text-foreground font-medium">[캐시워크]</span>
+                를 개발한 디지털 헬스케어 스타트업
               </p>
             </CardHeader>
           </Card>
@@ -58,7 +70,10 @@ export default function Career() {
                           {project.description}
                         </p>
                       </div>
-                      <Badge variant="outline" className="self-start flex-shrink-0">
+                      <Badge
+                        variant="outline"
+                        className="self-start flex-shrink-0"
+                      >
                         {project.period}
                       </Badge>
                     </div>

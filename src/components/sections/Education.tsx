@@ -13,8 +13,7 @@ const EDUCATION = [
     items: [
       {
         major: "소프트웨어융합대학 컴퓨터공학과",
-        period: "2021.09 – 2027.02 예정",
-        note: "전과",
+        period: "2021.09 – 2027.02 졸업예정",
       },
       {
         major: "공과대학 환경학 및 환경공학과",
@@ -25,13 +24,13 @@ const EDUCATION = [
   },
   {
     id: "boostcamp",
-    school: "네이버 커넥트재단 부스트캠프 웹·모바일 7기",
+    school: "네이버 커넥트재단 <부스트캠프 웹·모바일 7기>",
     icon: GraduationCap,
     items: [
       {
         major: "챌린지 과정",
         period: "2022.07 – 2022.08",
-        note: "JS ES6 기반 강도 높은 문제 해결 미션",
+        note: "Javascript ES6을 기반으로 하루 단위의 강도높은 문제 해결 미션을 수행",
       },
       {
         major: "멤버십 과정",
@@ -48,7 +47,7 @@ export default function Education() {
       <div className="max-w-[1100px] mx-auto">
         <SectionTitle title="Education" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+        <div className="flex flex-col gap-5 mt-12">
           {EDUCATION.map((edu, i) => (
             <motion.div
               key={edu.id}

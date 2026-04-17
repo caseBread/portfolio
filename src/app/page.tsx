@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

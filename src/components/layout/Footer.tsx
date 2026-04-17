@@ -14,7 +14,7 @@ const LINKS = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/geonu-kim",
+    href: "https://www.linkedin.com/in/quw",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ const LINKS = [
   },
   {
     label: "Blog",
-    href: "https://velog.io/@casebread",
+    href: "https://ohoweht.tistory.com/",
     icon: (
       <svg
         viewBox="0 0 24 24"

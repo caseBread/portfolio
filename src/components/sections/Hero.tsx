@@ -9,15 +9,10 @@ import { Button } from "@/components/ui/button";
 
 const LiquidEtherBackground = dynamic(
   () => import("@/components/ui/LiquidEtherBackground"),
-  { ssr: false }
+  { ssr: false },
 );
 
-const ROLES = [
-  "Performance Optimizer",
-  "Team Leader",
-  "SaaS Builder",
-  "Frontend Engineer",
-];
+const ROLES = ["Technical SEO", "Infrastructure", "Frontend"];
 
 const SOCIAL_LINKS = [
   {
@@ -32,18 +27,28 @@ const SOCIAL_LINKS = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/geonu-kim",
+    href: "https://www.linkedin.com/in/quw",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
       </svg>
     ),
   },
   {
     label: "Blog",
-    href: "https://velog.io/@casebread",
+    href: "https://ohoweht.tistory.com/",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
         <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3 2v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h8v-2H6z" />
       </svg>
     ),
@@ -71,9 +76,7 @@ export default function Hero() {
     const speed = isDeleting ? 40 : 80;
     const timer = setTimeout(() => {
       setDisplayedText((prev) =>
-        isDeleting
-          ? prev.slice(0, -1)
-          : currentRole.slice(0, prev.length + 1)
+        isDeleting ? prev.slice(0, -1) : currentRole.slice(0, prev.length + 1),
       );
     }, speed);
 
@@ -112,11 +115,16 @@ export default function Hero() {
           </div>
 
           <p className="text-muted-foreground text-[17px] leading-relaxed mb-8 max-w-lg">
-            서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를 만듭니다.
+            서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를
+            만듭니다.
           </p>
 
           <Button asChild size="lg" className="mb-6">
-            <a href="https://drive.google.com/file/d/10rJvH3M4CiWEW4szVwBKGmsxXHY1qtUU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://drive.google.com/file/d/10rJvH3M4CiWEW4szVwBKGmsxXHY1qtUU/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ExternalLink className="mr-2 h-4 w-4" />
               이력서 보러가기
             </a>

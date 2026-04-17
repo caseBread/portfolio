@@ -32,9 +32,22 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
               <Card
-                className="h-full flex flex-col hover:border-primary/50 transition-colors cursor-pointer"
+                className="h-full flex flex-col hover:border-primary/50 transition-colors cursor-pointer overflow-hidden"
                 onClick={() => setSelected(project)}
               >
+                {/* 이미지 영역 */}
+                <div className="h-60 w-full shrink-0 overflow-hidden bg-muted">
+                  {project.imageUrl ? (
+                    <img
+                      src={project.imageUrl}
+                      alt={project.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-primary/30 to-primary/10" />
+                  )}
+                </div>
+
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <h3 className="font-bold font-space-grotesk text-lg">
@@ -83,6 +96,19 @@ export default function Projects() {
       <Dialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
         {selected && (
           <DialogContent>
+            {/* 모달 이미지 */}
+            <div className="aspect-[16/6] w-full shrink-0 overflow-hidden rounded-t-xl">
+              {selected.imageUrl ? (
+                <img
+                  src={selected.imageUrl}
+                  alt={selected.name}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-primary/30 to-primary/10" />
+              )}
+            </div>
+
             <DialogHeader>
               <div className="flex items-start justify-between pr-6">
                 <div>

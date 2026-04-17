@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 
@@ -87,6 +87,8 @@ export default function Hero() {
     >
       <LiquidEtherBackground />
 
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-[1100px] mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,9 +116,9 @@ export default function Hero() {
           </p>
 
           <Button asChild size="lg" className="mb-6">
-            <a href="/resume.pdf" download="김건우_이력서.pdf">
-              <Download className="mr-2 h-4 w-4" />
-              이력서 다운로드
+            <a href="https://drive.google.com/file/d/10rJvH3M4CiWEW4szVwBKGmsxXHY1qtUU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              이력서 보러가기
             </a>
           </Button>
 

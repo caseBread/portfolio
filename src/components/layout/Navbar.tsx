@@ -61,7 +61,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-1">
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
@@ -72,7 +72,7 @@ export default function Navbar() {
             ) : (
               <Moon className="h-4 w-4" />
             )}
-          </Button>
+          </Button> */}
 
           <Sheet>
             <SheetTrigger asChild>

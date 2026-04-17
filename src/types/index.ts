@@ -13,6 +13,7 @@ export type Project = {
   period?: string;
   role?: string;
   highlights?: string[];
+  imageUrl?: string;
 };
 
 export type CareerProject = {

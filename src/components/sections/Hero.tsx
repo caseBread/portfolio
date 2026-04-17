@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
 const LiquidEtherBackground = dynamic(
   () => import("@/components/ui/LiquidEtherBackground"),
@@ -20,10 +19,35 @@ const ROLES = [
   "Frontend Engineer",
 ];
 
-const STATS = [
-  { value: "2Y+", label: "경력" },
-  { value: "MAU 150만", label: "서비스 운영" },
-  { value: "3개", label: "서비스 동시 개발" },
+const SOCIAL_LINKS = [
+  {
+    label: "GitHub",
+    href: "https://github.com/caseBread",
+    icon: <GithubIcon className="h-5 w-5" />,
+  },
+  {
+    label: "Email",
+    href: "mailto:kgu0515@gmail.com",
+    icon: <Mail className="h-5 w-5" />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/geonu-kim",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Blog",
+    href: "https://velog.io/@casebread",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+        <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm3 2v2h12V7H6zm0 4v2h12v-2H6zm0 4v2h8v-2H6z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Hero() {
@@ -75,7 +99,7 @@ export default function Hero() {
           </p>
 
           <h1 className="text-[clamp(52px,8vw,96px)] leading-none font-bold font-space-grotesk text-foreground mb-6">
-            Geonu Kim
+            김건우
           </h1>
 
           <div className="h-12 flex items-center justify-center mb-5">
@@ -85,57 +109,31 @@ export default function Hero() {
             </span>
           </div>
 
-          <p className="text-muted-foreground text-[17px] leading-relaxed mb-10 max-w-lg">
+          <p className="text-muted-foreground text-[17px] leading-relaxed mb-8 max-w-lg">
             서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를 만듭니다.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
-            <Button asChild>
-              <a
-                href="https://github.com/caseBread"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GithubIcon className="mr-2 h-4 w-4" />
-                GitHub
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="/resume.pdf" download="김건우_이력서.pdf">
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="#contact">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact Me
-              </a>
-            </Button>
-          </div>
-        </motion.div>
+          <Button asChild size="lg" className="mb-6">
+            <a href="/resume.pdf" download="김건우_이력서.pdf">
+              <Download className="mr-2 h-4 w-4" />
+              이력서 다운로드
+            </a>
+          </Button>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-3 gap-4 w-full max-w-md"
-        >
-          {STATS.map((stat) => (
-            <Card
-              key={stat.value}
-              className="bg-card/60 backdrop-blur-sm border-border"
-            >
-              <CardContent className="pt-6 pb-4 text-center">
-                <p className="text-xl font-bold font-space-grotesk text-primary">
-                  {stat.value}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {stat.label}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+          <div className="flex items-center gap-1">
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="w-11 h-11 flex items-center justify-center rounded-full text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

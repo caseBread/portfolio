@@ -1,3 +1,5 @@
+@import url('https://static.toss.im/tps/main.css');
+@import url('https://static.toss.im/tps/others.css');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -47,8 +49,8 @@
   --accent-foreground: #0f172a;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
   --ring: #1a56db;
 }
 
@@ -78,8 +80,28 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes star-movement-bottom {
+  0%   { transform: translate(0%, 0%);    opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+@keyframes star-movement-top {
+  0%   { transform: translate(0%, 0%);   opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+@keyframes star-movement-bottom-reverse {
+  0%   { transform: translate(0%, 0%);   opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+@keyframes star-movement-top-reverse {
+  0%   { transform: translate(0%, 0%);    opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+
+* {
+  font-family: 'Toss Product Sans', var(--font-inter), system-ui, sans-serif;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
 }

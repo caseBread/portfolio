@@ -10,6 +10,9 @@ export type Project = {
   techStack: string[];
   githubUrl?: string;
   demoUrl?: string;
+  period?: string;
+  role?: string;
+  highlights?: string[];
 };
 
 export type CareerProject = {

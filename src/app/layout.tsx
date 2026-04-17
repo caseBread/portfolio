@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "김건우 | 프론트엔드 개발자",
   description:
     "서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를 만듭니다.",
+  openGraph: {
+    images: [{ url: "/geonu-preview-image.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/geonu-preview-image.png"],
+  },
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Geonu Kim | Frontend Developer",
+  title: "김건우 | 프론트엔드 개발자",
   description:
     "서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를 만듭니다.",
 };

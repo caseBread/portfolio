@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Link } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { CAREER_PROJECTS } from "@/data/projects";
@@ -20,7 +20,7 @@ export default function Career() {
           transition={{ duration: 0.6 }}
           className="mt-12"
         >
-          <Card className="mb-8">
+          <Card>
             <CardHeader>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex items-center gap-3">
@@ -28,6 +28,7 @@ export default function Career() {
                     <Image
                       src="/images/career/cashwalk.png"
                       alt="넛지헬스케어 로고"
+                      loading="lazy"
                       width={40}
                       height={40}
                       className="object-contain"
@@ -50,55 +51,71 @@ export default function Career() {
                 를 개발한 디지털 헬스케어 스타트업
               </p>
             </CardHeader>
-          </Card>
-
-          <div className="flex flex-col gap-6">
-            {CAREER_PROJECTS.map((project, i) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-              >
-                <Card>
-                  <CardContent className="pt-6 pb-6">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                      <div>
-                        <h4 className="font-bold text-base">{project.name}</h4>
-                        <p className="text-muted-foreground text-sm mt-1">
-                          {project.description}
-                        </p>
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className="self-start flex-shrink-0"
-                      >
-                        {project.period}
-                      </Badge>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {project.techStack.map((tech) => (
-                        <Badge key={tech} variant="secondary">
-                          {tech}
+            <CardContent className="flex flex-col gap-4 pb-6">
+              {CAREER_PROJECTS.map((project, i) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                >
+                  <Card className="bg-muted/40">
+                    <CardContent className="pt-6 pb-6">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                        <div>
+                          <h4 className="font-bold text-base">
+                            {project.name}
+                          </h4>
+                          <p className="text-muted-foreground text-sm mt-1">
+                            {project.description}
+                          </p>
+                        </div>
+                        <Badge
+                          variant="outline"
+                          className="self-start flex-shrink-0"
+                        >
+                          {project.period}
                         </Badge>
-                      ))}
-                    </div>
+                      </div>
 
-                    <ul className="space-y-2">
-                      {project.achievements.map((ach, j) => (
-                        <li key={j} className="flex gap-2 items-start text-sm">
-                          <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground">{ach}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {project.techStack.map((tech) => (
+                          <Badge key={tech} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      <ul className="space-y-2">
+                        {project.achievements.map((ach, j) => (
+                          <li
+                            key={j}
+                            className="flex gap-2 items-start text-sm"
+                          >
+                            <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-foreground flex items-center gap-1">
+                              {ach.text}
+                              {ach.link && (
+                                <a
+                                  href={ach.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:text-primary/70 transition-colors flex-shrink-0"
+                                >
+                                  <Link className="h-3.5 w-3.5" />
+                                </a>
+                              )}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>

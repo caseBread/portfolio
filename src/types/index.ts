@@ -17,13 +17,18 @@ export type Project = {
   imageUrl?: string;
 };
 
+export type Achievement = {
+  text: string;
+  link?: string;
+};
+
 export type CareerProject = {
   id: string;
   name: string;
   period: string;
   description: string;
   techStack: string[];
-  achievements: string[];
+  achievements: Achievement[];
 };
 
 export type ExperienceItem = {

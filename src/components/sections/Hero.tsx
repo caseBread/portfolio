@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { ExternalLink, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
@@ -12,7 +11,11 @@ const LiquidEtherBackground = dynamic(
   { ssr: false },
 );
 
-const ROLES = ["Technical SEO", "Infrastructure", "Frontend"];
+const ROLES = [
+  "SEO Optimization",
+  "Infrastructure",
+  "Performance Optimization",
+];
 
 const SOCIAL_LINKS = [
   {
@@ -93,12 +96,7 @@ export default function Hero() {
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-[1100px] mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center"
-        >
+        <div className="flex flex-col items-center">
           <p className="text-primary text-base font-inter tracking-[0.15em] uppercase mb-6">
             Frontend Developer
           </p>
@@ -143,7 +141,7 @@ export default function Hero() {
               </a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -11,8 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "김건우 | 프론트엔드 개발자",
-  description:
-    "서비스의 목표를 이해하고, 운영에 실질적으로 기여하는 코드를 만듭니다.",
+  description: "서비스의 목표를 이해하고 달성하는 개발자 김건우입니다.",
   openGraph: {
     images: [{ url: "/geonu-preview-image.png" }],
   },
@@ -34,7 +33,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>

@@ -18,10 +18,9 @@ export const PROJECTS: Project[] = [
     period: "2026.02 – 2026.03",
     role: "프론트엔드",
     highlights: [
-      "큐시즘 소속 — 기획 2명, 디자인 2명, 프론트엔드 2명, 백엔드 2명",
+      "기획 2명, 디자인 2명, 프론트엔드 2명, 백엔드 2명",
       "리트머스 홈페이지 리뉴얼 및 고객 문의 플로우 고도화",
       "Figma MCP를 활용한 디자인-개발 워크플로우 적용",
-      "GitHub: 기업보안 상 private repository",
     ],
   },
   {
@@ -70,7 +69,7 @@ export const PROJECTS: Project[] = [
     highlights: [
       "큐시즘 소속 — 기획 2명, 디자인 2명, 프론트엔드 2명, 백엔드 2명",
       "LG전자 라이프집 서비스 리텐션 및 수익화 구조 개선 기능 제안 및 개발",
-      "KUSITHMS 32기 최종 발표 2등상 수상",
+      "KUSITMS 32기 최종 발표 2등상 수상",
       "GitHub: 기업보안 상 private repository",
     ],
   },
@@ -164,15 +163,24 @@ export const CAREER_PROJECTS: CareerProject[] = [
       "refine",
     ],
     achievements: [
-      "4명 규모 프론트엔드 파트 실무 관리 (온보딩 미션 프로세스 도입)",
-      "Core Web Vitals(LCP, INP, CLS) 각각 50% 이상 점수 개선 (CrUX 보고서 기준)",
-      "SVG sprite 기법으로 첫 페이지 로드 시 이미지 요청 수 90% 감소",
-      "크롤링 예산 약 25% 절약 (SSR 동시성 문제 해결)",
-      "source html CDN 적용으로 평균 응답속도 59% 감소",
-      "다국어(i18n) 기능 도입 (next-i18next)",
-      "멀티테넌시 아키텍처 내 로그인 연동구조 주도적 설계",
-      "고객사 모듈 도입 시간 최대 2주 → 1주 단축 (웹뷰 연동 구조 문서화)",
-      "프론트엔드 A/B 테스트 구조 설계 (AWS ALB 가중치 설정 활용)",
+      {
+        text: "4명 규모 프론트엔드 파트 실무 관리 (온보딩 미션 프로세스 도입)",
+      },
+      {
+        text: "Core Web Vitals(LCP, INP, CLS) 각각 50% 이상 점수 개선 (CrUX 보고서 기준)",
+      },
+      { text: "SVG sprite 기법으로 첫 페이지 로드 시 이미지 요청 수 90% 감소" },
+      { text: "크롤링 예산 약 25% 절약 (SSR 동시성 문제 해결)" },
+      { text: "source html CDN 적용으로 평균 응답속도 59% 감소" },
+      { text: "다국어(i18n) 기능 도입 (next-i18next)" },
+      {
+        text: "멀티테넌시 아키텍처 내 로그인 연동구조 주도적 설계",
+        link: "https://lace-arithmetic-e7e.notion.site/2e8670f23303802d881ec34843284e7a?source=copy_link",
+      },
+      {
+        text: "고객사 모듈 도입 시간 최대 2주 → 1주 단축 (웹뷰 연동 구조 문서화)",
+      },
+      { text: "프론트엔드 A/B 테스트 구조 설계 (AWS ALB 가중치 설정 활용)" },
     ],
   },
   {
@@ -188,11 +196,13 @@ export const CAREER_PROJECTS: CareerProject[] = [
       "openapi-typescript",
     ],
     achievements: [
-      "2명 규모 프론트엔드 파트 실무 관리",
-      "Play Framework 레거시 페이지를 Next.js로 개편",
-      "AWS SNS + Lambda로 CodePipeline 배포 완료 시 슬랙 자동 알림 개발 (업무 효율 개선)",
-      "캐시딜(커머스) 모듈 연동 개발",
-      "제품 및 브랜드 정보 관리 백오피스 개발",
+      { text: "2명 규모 프론트엔드 파트 실무 관리" },
+      { text: "Play Framework 레거시 페이지를 Next.js로 개편" },
+      {
+        text: "AWS SNS + Lambda로 CodePipeline 배포 완료 시 슬랙 자동 알림 개발 (업무 효율 개선)",
+      },
+      { text: "캐시딜(커머스) 모듈 연동 개발" },
+      { text: "제품 및 브랜드 정보 관리 백오피스 개발" },
     ],
   },
   {
@@ -202,15 +212,15 @@ export const CAREER_PROJECTS: CareerProject[] = [
     description: "뉴스 큐레이션 앱테크 서비스.",
     techStack: ["React.js", "Next.js", "TypeScript", "Tanstack Query"],
     achievements: [
-      "캐시워크 앱 내 잠금화면 노출 서플뉴스 기능 개발",
-      "Adsense, Adfit 등 웹 광고 연동 및 광고 미디에이션 시스템 개발",
+      { text: "캐시워크 앱 내 잠금화면 노출 서플뉴스 기능 개발" },
+      { text: "Adsense, Adfit 등 웹 광고 연동 및 광고 미디에이션 시스템 개발" },
     ],
   },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    id: "kusithms",
+    id: "kusitms",
     org: "KUSITMS(한국대학생IT경영학회) 32-33기",
     homepageUrl: "https://www.kusitms.com",
     period: "2025.08 – 2026.06",

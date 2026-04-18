@@ -2,17 +2,27 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, CheckCircle2, ArrowUpRight, Presentation } from "lucide-react";
+import {
+  ExternalLink,
+  CheckCircle2,
+  ArrowUpRight,
+  Presentation,
+} from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
-  Dialog, DialogContent, DialogHeader, DialogBody,
-  DialogTitle, DialogDescription,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogBody,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { PROJECTS } from "@/data/projects";
 import type { Project } from "@/types";
+import Image from "next/image";
 
 export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -41,6 +51,8 @@ export default function Projects() {
                     <img
                       src={project.imageUrl}
                       alt={project.name}
+                      fetchPriority="low"
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -68,10 +80,17 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
+                  <div
+                    className="flex gap-2"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {project.githubUrl && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <GithubIcon className="mr-1.5 h-3.5 w-3.5" />
                           GitHub
                         </a>
@@ -79,7 +98,11 @@ export default function Projects() {
                     )}
                     {project.demoUrl && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                           Demo
                         </a>
@@ -87,7 +110,11 @@ export default function Projects() {
                     )}
                     {project.presentationUrl && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={project.presentationUrl} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.presentationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Presentation className="mr-1.5 h-3.5 w-3.5" />
                           발표자료
                         </a>
@@ -101,7 +128,12 @@ export default function Projects() {
         </div>
       </div>
 
-      <Dialog open={!!selected} onOpenChange={(open) => { if (!open) setSelected(null); }}>
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => {
+          if (!open) setSelected(null);
+        }}
+      >
         {selected && (
           <DialogContent>
             {/* 모달 이미지 */}
@@ -122,11 +154,15 @@ export default function Projects() {
                 <div>
                   <DialogTitle>{selected.name}</DialogTitle>
                   {selected.period && (
-                    <p className="text-xs text-muted-foreground mt-1">{selected.period}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {selected.period}
+                    </p>
                   )}
                 </div>
                 {selected.role && (
-                  <Badge variant="secondary" className="mt-0.5 flex-shrink-0">{selected.role}</Badge>
+                  <Badge variant="secondary" className="mt-0.5 flex-shrink-0">
+                    {selected.role}
+                  </Badge>
                 )}
               </div>
               <DialogDescription className="mt-2">
@@ -137,7 +173,9 @@ export default function Projects() {
             <DialogBody>
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {selected.techStack.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                  <Badge key={tech} variant="secondary" className="text-xs">
+                    {tech}
+                  </Badge>
                 ))}
               </div>
 
@@ -155,7 +193,11 @@ export default function Projects() {
               <div className="flex gap-2">
                 {selected.githubUrl && (
                   <Button variant="outline" size="sm" asChild>
-                    <a href={selected.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={selected.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <GithubIcon className="mr-1.5 h-3.5 w-3.5" />
                       GitHub
                     </a>
@@ -163,7 +205,11 @@ export default function Projects() {
                 )}
                 {selected.demoUrl && (
                   <Button variant="outline" size="sm" asChild>
-                    <a href={selected.demoUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={selected.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
                       Demo
                     </a>
@@ -171,7 +217,11 @@ export default function Projects() {
                 )}
                 {selected.presentationUrl && (
                   <Button variant="outline" size="sm" asChild>
-                    <a href={selected.presentationUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={selected.presentationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Presentation className="mr-1.5 h-3.5 w-3.5" />
                       발표자료
                     </a>

@@ -32,6 +32,20 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://static.toss.im" />
+
+        <link
+          rel="stylesheet"
+          href="https://static.toss.im/tps/main.css"
+          media="print"
+        />
+        <link
+          rel="stylesheet"
+          href="https://static.toss.im/tps/others.css"
+          media="print"
+        />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}

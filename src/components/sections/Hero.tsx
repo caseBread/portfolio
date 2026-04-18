@@ -116,7 +116,7 @@ export default function Hero() {
             서비스의 목표를 이해하고 달성하는 개발자 김건우입니다.
           </p>
 
-          <Button asChild size="lg" className="mb-6">
+          <Button asChild size="lg" className="mb-6 text-[#1e1e1e]">
             <a
               href="https://drive.google.com/file/d/10rJvH3M4CiWEW4szVwBKGmsxXHY1qtUU/view?usp=sharing"
               target="_blank"

@@ -101,9 +101,10 @@ export default function Career() {
                                   href={ach.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
+                                  aria-label="관련 링크 열기"
                                   className="text-primary hover:text-primary/70 transition-colors flex-shrink-0"
                                 >
-                                  <Link className="h-3.5 w-3.5" />
+                                  <Link className="h-3.5 w-3.5" aria-hidden="true" />
                                 </a>
                               )}
                             </span>

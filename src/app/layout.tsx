@@ -33,6 +33,10 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="PRXbUpwjHbIu-Fopc6kjUwnHKxe0DR_NzyXS112xYLY"
+        />
         <link rel="preconnect" href="https://static.toss.im" />
 
         <link

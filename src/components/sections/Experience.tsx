@@ -36,9 +36,10 @@ export default function Experience() {
                           href={item.homepageUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label="홈페이지 열기"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          <Link className="w-3.5 h-3.5" />
+                          <Link className="w-3.5 h-3.5" aria-hidden="true" />
                         </a>
                       )}
                     </h3>

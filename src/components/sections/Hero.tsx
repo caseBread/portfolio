@@ -113,7 +113,7 @@ export default function Hero() {
           </div>
 
           <p className="text-foreground/70 text-[19px] leading-relaxed mb-8 max-w-xl">
-            서비스의 목표를 이해하고 달성하는 개발자 김건우입니다.
+            동료의 신뢰 위에서 성장하는 개발자 김건우입니다.
           </p>
 
           <Button asChild size="lg" className="mb-6 text-[#1e1e1e]">

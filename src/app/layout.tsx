@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "김건우 | 프론트엔드 개발자",
-  description: "서비스의 목표를 이해하고 달성하는 개발자 김건우입니다.",
+  description: "동료의 신뢰 위에서 성장하는 개발자 김건우입니다.",
   openGraph: {
     images: [{ url: "/geonu-preview-image.png" }],
   },

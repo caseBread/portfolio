@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
       "Zustand",
       "React-query",
     ],
-    githubUrl: "https://github.com/dnd-side-project/dnd-13th-3-frontend",
+    githubUrl: "https://github.com/dnd-side-project/dnd-13th-4-frontend",
     presentationUrl: "https://dnd.ac/projects/93",
     period: "2025.07 – 2025.08",
     role: "프론트엔드",

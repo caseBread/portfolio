@@ -9,7 +9,7 @@ const LINKS = [
   },
   {
     label: "Email",
-    href: "mailto:kgu0515@gmail.com",
+    href: "mailto:contact@geonu.dev",
     icon: <Mail className="h-5 w-5" />,
   },
   {

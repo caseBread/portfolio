@@ -24,9 +24,9 @@ export default function Contact() {
 
           <div className="flex flex-wrap justify-center gap-3">
             <Button asChild size="lg">
-              <a href="mailto:kgu0515@gmail.com">
+              <a href="mailto:contact@geonu.dev">
                 <Mail className="mr-2 h-4 w-4" />
-                kgu0515@gmail.com
+                contact@geonu.dev
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
